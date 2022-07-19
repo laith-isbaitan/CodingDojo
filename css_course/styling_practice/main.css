@@ -1,0 +1,20 @@
+h1 {
+    font-family: cursive;
+    color: aqua;
+    background-color: black;
+    text-align: left;
+}
+span {
+    color: white;
+}
+h2{
+    font-family: monospace;
+    color: rgb(58, 128, 128);
+    background-color: rgb(0, 4, 126);
+    text-align: center;
+}
+h3{
+    color: rgb(14, 0, 61);
+    background-color: aqua;
+    text-align: right;
+}
