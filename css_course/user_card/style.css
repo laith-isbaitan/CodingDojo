@@ -1,0 +1,35 @@
+.container{
+    padding: 50px;
+}
+    .card{
+        border: 2px solid black;
+        box-shadow: 2px 2px rgb(157, 157, 157);
+        background-color: aqua;
+    }
+    .icon{
+        height: 100px;
+        width: 100px;
+        position: relative;
+        top: 60px;
+        left: 20px;
+    }
+    .content{
+        background-color: white;
+        height: 80%;
+        padding: 30px 0px 10px 20px;
+    }
+        .gear{
+            height: 10px;
+            width: 10px;
+        }
+        .map{
+            height: 30px;
+            width: 20px;
+        }
+        h1{
+            margin: 20px 0px;
+        }
+        .place{
+            display: flex;
+        }
+        
