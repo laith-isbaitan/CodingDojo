@@ -1,0 +1,22 @@
+.nav{
+    background-color: rgb(52, 52, 52);
+    padding: 0px 15px;
+    margin: 0px 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.nav-links li{
+    display: inline-block;
+}
+.nav-links > *{
+    margin: 0px 10px;
+}
+:link{
+    color: white;
+    text-decoration: none;
+}
+.nav-links{
+
+    margin-left: auto;
+}

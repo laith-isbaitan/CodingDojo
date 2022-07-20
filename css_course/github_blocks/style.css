@@ -1,0 +1,25 @@
+.container{
+    padding: 20px;
+}
+    .container div{
+        padding: 20px;
+        margin: 10px 0px;
+        display: flex;
+        align-items: center;
+    }
+.top{
+    background-color: aqua;
+    justify-content: space-between;
+}
+.mid{
+    background-color: pink;
+    justify-content: space-around;
+}
+.bot{
+    background-color: blueviolet;
+    justify-content: space-between;
+}
+img{
+    height: 400px;
+    width: 400px;
+}
