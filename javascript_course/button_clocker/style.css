@@ -1,0 +1,82 @@
+body{
+    margin:0px 10% 0px 10%;
+}
+.container{
+    display: flex;
+    margin-top: 25px;
+    font-family:sans-serif;
+}
+/* navbar */
+nav{
+    background-color: rgb(187, 187, 187);
+    padding: 10px;
+}
+    h1{
+        display: inline;
+        margin-right: 10%;
+    }
+    nav .search{
+        margin: 0px auto;
+        border: 2px solid black;
+    }
+    nav button{
+        float: right;
+        background-color: blue;
+        color: white;
+        box-shadow: 2px 2px black;
+    }
+aside{
+    flex: 1;
+    align-items: center;
+    margin-left: 2%;
+}
+    aside div{
+        border: 3px solid black;
+        padding: 10px 20px;
+    }
+    aside h3{
+        margin-top: 0px;
+    }
+    aside button{
+        background-color: rgb(0, 179, 0);
+        border: 2px solid black;
+        box-shadow: 2px 2px black;
+        text-align: center;
+        padding: 5px 20px;
+        width: 90%;
+    }
+/* main content */
+main{
+    vertical-align: top;
+    flex: 2;
+}
+    main .card{
+        display: flex;
+        border: 3px solid black;
+        padding: 10px;
+        margin-bottom: 3%;
+    }
+    main .card .left{
+        text-align: center;
+    }
+    .card h2{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .right{
+        align-items: center;
+    }
+    .card .right p{
+        vertical-align: middle;
+    }
+    .card h2+p{
+        margin-top: 0px;
+    }
+    .card button{
+        background-color: rgb(90, 245, 0);
+        border: 2px solid black;
+        box-shadow: 2px 2px black;
+        text-align: center;
+        padding: 5px 0px;
+        width: 90%;
+    }
