@@ -9,14 +9,20 @@ var hour=document.querySelector("#hour");
 var min=document.querySelector("#minutes");
 
 function timeofhour(time){
-    return((time/3600)+180) % 360;
+    time %= 43200;
+    // because we want out of 12 not 60
+    time *= 60/12;
+    return(((6*time)/3600)+180) % 360;
 }
 function timeofmin(time){
-    return((time/60)+180) % 360;
+    time %= 3600;
+    return(((6*time)/60)+180) % 360;
 }
 function timeofsec(time){
-    return ((time+180) % 360);
+    time %= 60;
+    return ((6*time +180) % 360);
 }
+
 setInterval( function() {
     var time = getSecondsSinceStartOfDay();
     console.log(time);
