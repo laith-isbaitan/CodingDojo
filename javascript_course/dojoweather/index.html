@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar  -->
+    <div class="navbar">
+        <h1>DojoWeather</h1>
+        <ul>
+            <li onclick="city(this)">Byrbank</li>
+            <li onclick="city(this)">Chicago</li>
+            <li onclick="city(this)">Dallas</li>
+        </ul>
+    </div>
+    <!-- content  -->
+    <main>
+        <div class="top">
+            <h2>San Jose</h2>
+            <p>show temperature</p>
+            <select name="temp" id="temp" onchange="tempreture(this)">
+                <option value="C">C</option>
+                <option value="F">F</option>
+            </select>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h3>Today</h3>
+                <img src="./assets/some_rain.png" alt="">
+                <p>some rain</p>
+                <p class="red">24</p>
+                <p class="blue">18</p>
+            </div>
+            <div class="card">
+                <h3>Today</h3>
+                <img src="./assets/some_sun.png" alt="">
+                <p>some rain</p>
+                <p class="red">27</p>
+                <p class="blue">19</p>
+            </div>
+            <div class="card">
+                <h3>Today</h3>
+                <img src="./assets/some_clouds.png" alt="">
+                <p>some rain</p>
+                <p class="red">21</p>
+                <p class="blue">16</p>
+            </div>
+            <div class="card">
+                <h3>Today</h3>
+                <img src="./assets/some_sun.png" alt="">
+                <p>some rain</p>
+                <p class="red">26</p>
+                <p class="blue">21</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img src="./assets/cookie.png" alt="">
+        <div class="content">
+            <h2>Stop! Cookie time</h2>
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads to
+                 provide social media features and to analyse our traffic. <a href="">Read more...</a></p>
+        </div>
+        <button onclick="accept_cookie()">I Accept</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
