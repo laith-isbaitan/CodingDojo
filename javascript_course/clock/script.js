@@ -9,13 +9,13 @@ var hour=document.querySelector("#hour");
 var min=document.querySelector("#minutes");
 
 function timeofhour(time){
-    return((time%43200 /3600)+180) % 360;
+    return((time/3600)+180) % 360;
 }
 function timeofmin(time){
-    return((time%3600 /60)+180) % 360;
+    return((time/60)+180) % 360;
 }
 function timeofsec(time){
-    return ((time%60 +180) % 360);
+    return ((time+180) % 360);
 }
 setInterval( function() {
     var time = getSecondsSinceStartOfDay();
