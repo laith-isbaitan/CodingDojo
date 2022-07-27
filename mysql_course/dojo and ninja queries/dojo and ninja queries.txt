@@ -1,0 +1,50 @@
+1-
+insert into dojos (name,created_at,updated_at) values ( 'karate',now(),now());
+insert into dojos (name,created_at,updated_at) values ( 'fighting',now(),now());
+insert into dojos (name,created_at,updated_at) values ( 'defend',now(),now());
+
+2-
+delete from dojos where dojos.id=1;
+delete from dojos where dojos.id=2;
+delete from dojos where dojos.id=3;
+
+3-
+insert into dojos (name,created_at,updated_at) values ( 'karate',now(),now());
+insert into dojos (name,created_at,updated_at) values ( 'fighting',now(),now());
+insert into dojos (name,created_at,updated_at) values ( 'defend',now(),now());
+
+4-
+insert into ninjas (first_name,last_name,age,created_at,updated_at,dojos_id) 
+values ('laith','isbaitan',20,now(),now(),4);
+insert into ninjas (first_name,last_name,age,created_at,updated_at,dojos_id) 
+values ('ibrahim','isbaitan',10,now(),now(),4);
+insert into ninjas (first_name,last_name,age,created_at,updated_at,dojos_id) 
+values ('omar','lastname',22,now(),now(),4);
+
+insert into ninjas (first_name,last_name,age,created_at,updated_at,dojos_id) 
+values ('laith','isbaitan',20,now(),now(),5);
+insert into ninjas (first_name,last_name,age,created_at,updated_at,dojos_id) 
+values ('baby','baby',2,now(),now(),5);
+insert into ninjas (first_name,last_name,age,created_at,updated_at,dojos_id) 
+values ('old','dude',80,now(),now(),5);
+
+insert into ninjas (first_name,last_name,age,created_at,updated_at,dojos_id) 
+values ('laith','isbaitan',20,now(),now(),6);
+insert into ninjas (first_name,last_name,age,created_at,updated_at,dojos_id) 
+values ('young','man',25,now(),now(),6);
+insert into ninjas (first_name,last_name,age,created_at,updated_at,dojos_id) 
+values ('majd','happy',17,now(),now(),6);
+
+5-
+select * from ninjas where ninjas.dojos_id = 4;
+
+6-
+select * from ninjas where ninjas.dojos_id = 6;
+
+7-
+select * from dojos where dojos.id=(
+select dojos_id from ninjas where ninjas.id=11);
+
+
+
+

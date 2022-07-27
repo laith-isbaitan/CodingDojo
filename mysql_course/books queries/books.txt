@@ -1,0 +1,61 @@
+1- 
+insert into authors (name,created_at,updated_at) values('jane austen',now(),now());
+insert into authors (name,created_at,updated_at) values('emily dickinson',now(),now());
+insert into authors (name,created_at,updated_at) values('fayord dostoevsky',now(),now());
+insert into authors (name,created_at,updated_at) values('william shakespeare',now(),now());
+insert into authors (name,created_at,updated_at) values('lau tzu',now(),now());
+
+
+2-
+insert into books (title,num_of_pages,created_at,update_at) values ('c sharp',50,now(),now());
+insert into books (title,num_of_pages,created_at,update_at) values ('java',100,now(),now());
+insert into books (title,num_of_pages,created_at,update_at) values ('php',200,now(),now());
+insert into books (title,num_of_pages,created_at,update_at) values ('python',20,now(),now());
+insert into books (title,num_of_pages,created_at,update_at) values ('ruby',70,now(),now());
+
+3-
+update books set title='c#' where title='c sharp';
+
+
+4 5 6 7-
+insert into favorites (authors_id,books_id) values(6,1),(6,2),(7,1),(7,2),(7,3),(8,1)
+,(8,2),(8,3),(8,4),(9,1),(9,2),(9,3),(9,4),(9,5);
+
+
+8-
+select * from authors join favorites on authors.id=favorites.authors_id
+where favorites.books_id=3;
+
+9-
+delete from favorites where favorites.authors_id=1 and favorites.books_id=3;
+
+10-
+INSERT INTO favorites (author_id,book_id)
+VALUES (5,2);
+
+11-
+select * from books 
+join favorites on books.id= favorites.books_id
+where favorites.authors_id=8;
+
+12-
+select * from authors join favorites on authors.id= favorites.authors_id
+where favorites.books_id=5;
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
