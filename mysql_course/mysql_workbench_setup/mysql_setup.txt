@@ -1,0 +1,7 @@
+select * from users where names.id = 1;
+
+insert into users (name,pass) values ("laith","123");
+
+update users set name= "omar",pass="321" where name = "laith";
+
+delete from users where name = "omar";

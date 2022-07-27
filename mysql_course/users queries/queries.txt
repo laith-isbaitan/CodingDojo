@@ -1,0 +1,37 @@
+1-
+insert into users (first_name,last_name,email,password,user_level,description,created_at,updated_at)
+values('laith','isbaitan','laith.isbaitan@axsos.me','123',5,'very chill',now(),now());
+
+insert into users (first_name,last_name,email,password,user_level,description,created_at,updated_at)
+values('ibrahim','isbaitan','ibrahim@yahoo.com','345',5,'annoying',now(),now());
+
+insert into users (first_name,last_name,email,password,user_level,description,created_at,updated_at)
+values('omar','something','omar@email.com','321',2,'very cool',now(),now());
+
+insert into users (first_name,last_name,email,password,user_level,description,created_at,updated_at)
+values('majd','good name','majd@yahoo.com','567',8,'smart',now(),now());
+
+2-
+select * from users;
+
+//////////////////////////////////////////////////////
+3-
+select * from users where users.email='laith.isbaitan@axsos.me';
+
+4-
+select * from users where users.id
+=(select max(id) from users);
+
+5-
+update users set users.last_name='pancakes' where users.id=3;
+
+6-
+delete from users where users.id=2;
+
+7-
+select * from users order by users.first_name;
+
+8-
+select * from users order by users.first_name desc;
+
+
