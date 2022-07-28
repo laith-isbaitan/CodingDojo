@@ -20,22 +20,39 @@ function render(theDojo) {
 }
 
 function howMany(i, j, element) {
-    var ninjas=0;
-    var x=theDojo;
-    var left=x[i][j-1];
-    var up=x[i-1][j];
-    var right=x[i][j+1];
-    var down=x[i+1][j];
-        // we can calculate up down left right
-        //same row 
-        ninjas += x[i][j] + x[i][j+1] + x[i][j-1];
-        // ubove row 
-        ninjas += x[i+1][j] + x[i+1][j+1] + x[i+1][j-1];
-        // bellow row 
-        ninjas += x[i-1][j] + x[i-1][j+1] + x[i-1][j-1];
+    let ninjas=0;
+    // var x=theDojo;
+    let possabilities=[[-1,-1],[-1,0],[-1,1],
+                        [0,-1],[0,0],[0,1],
+                        [1,-1],[1,0],[1,1]];
+        for (let k = 0; k < possabilities.length; k++) {
+            let x=possabilities[k][0];
+            let y=possabilities[k][1];
+            let x1= j+x;
+            let y1= i+y;
+            // console.log(i+" "+j);
+            console.log(x+" "+y);
+            console.log(x1+" "+y1);
+
+            console.log(theDojo[i+x][j+y]);
+            if(typeof (theDojo[x1][y1]) === 'undefined'){
+                console.log("hi")
+            }else if(typeof (theDojo[i+x][j+y]) !== 'undefined'){
+                ninjas +=theDojo[x1][y1];
+            }
+        }
+
+
+        // // we can calculate up down left right
+        // //same row 
+        // ninjas += x[i][j] + x[i][j+1] + x[i][j-1];
+        // // ubove row 
+        // ninjas += x[i+1][j] + x[i+1][j+1] + x[i+1][j-1];
+        // // bellow row 
+        // ninjas += x[i-1][j] + x[i-1][j+1] + x[i-1][j-1];
     
     console.log(ninjas);
-    alert("TODO - determine how many ninjas are hiding in adjacent squares");
+    // alert("TODO - determine how many ninjas are hiding in adjacent squares");
 }
     
 // BONUS CHALLENGES
