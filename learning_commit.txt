@@ -1,0 +1,14 @@
+mkdir test
+cd test
+touch index.html
+touch style.css
+git init
+git add .
+git commit -m "init rep"
+git add index.html
+git commit -m "html update"
+git add style.css
+git commit -m "style update"
+git log
+git revert -n 8ce7936d753400b0a95d39a0933e945090c7304c
+git commit -m "revert to no css"
