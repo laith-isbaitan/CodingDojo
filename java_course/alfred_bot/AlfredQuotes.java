@@ -11,6 +11,10 @@ public class AlfredQuotes {
         // YOUR CODE HERE
         return String.format("Hello %s , lovely to see you. How are you?",name);
     }
+    public String guestGreeting(String name , String dayPeriod) {
+        // YOUR CODE HERE
+        return String.format("Good %s %s , lovely to see you. How are you?",dayPeriod,name);
+    }
     
     public String dateAnnouncement() {
         // YOUR CODE HERE
@@ -26,6 +30,14 @@ public class AlfredQuotes {
             return "At your service. As you wish, naturally.";
         }else{
             return "Right. And with that I shall retire.";
+        }
+    }
+
+    public String alfred_panic(String enemy){
+        if(enemy.equals("joker")){
+            return "oh nooooooooooo!";
+        }else{
+            return "Alexis you can handle this";
         }
     }
     

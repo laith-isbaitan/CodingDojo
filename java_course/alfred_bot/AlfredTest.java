@@ -12,8 +12,9 @@ public class AlfredTest {
         
         // Make some test greetings, providing any necessary data
         String testGreeting = alfredBot.basicGreeting();
-        String testGuestGreeting = alfredBot.guestGreeting("Beth Kane");
+        String testGuestGreeting = alfredBot.guestGreeting("Beth Kane","evening");
         String testDateAnnouncement = alfredBot.dateAnnouncement();
+        String panic_test = alfredBot.alfred_panic("joker");
         
         String alexisTest = alfredBot.respondBeforeAlexis(
                             "Alexis! Play some low-fi beats."
@@ -30,6 +31,8 @@ public class AlfredTest {
         System.out.println(alexisTest);
         System.out.println(alfredTest);
         System.out.println(notRelevantTest);
+        System.out.println(panic_test);
+
 
         
         // Uncomment these one at a time as you implement each method.
