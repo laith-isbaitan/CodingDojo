@@ -1,4 +1,4 @@
-var theDojo = [ [1, 0, 1, 1, 1, 0, 4, 0, 8, 0],
+var theDojo_old = [ [1, 0, 1, 1, 1, 0, 4, 0, 8, 0],
                 [3, 1, 0, 7, 0, 0, 6, 0, 8, 8],
                 [5, 0, 7, 0, 3, 6, 6, 6, 0, 0],
                 [2, 3, 0, 9, 0, 0, 6, 0, 8, 0],
@@ -8,8 +8,31 @@ var theDojo = [ [1, 0, 1, 1, 1, 0, 4, 0, 8, 0],
                 [2, 2, 2, 2, 0, 7, 1, 1, 1, 0],
                 [5, 2, 0, 2, 0, 0, 0, 1, 1, 2],
                 [9, 2, 2, 2, 0, 7, 0, 1, 1, 0] ];
+var theDojo = [ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
 var dojoDiv = document.querySelector("#the-dojo");
 function render(theDojo) {
+    //setting ninjas in dojo
+    var ninjas_pos=[];
+    var ninjas_left=10;
+    while( ninjas_left != 0){
+        var pos_i = Math.floor(Math.random() * (9 - 0) + 0);
+        var pos_j = Math.floor(Math.random() * (9 - 0) + 0);
+        if (ninjas_pos.indexOf([pos_i,pos_j]) == -1) {
+            ninjas_pos.push([pos_i,pos_j]);
+            theDojo[pos_i][pos_j] = 1;
+            ninjas_left--;
+        }
+    }
+    //setting buttons
     var result = "";
     for(var i=0; i<theDojo.length; i++) {
         for(var j=0; j<theDojo[i].length; j++) {
@@ -20,47 +43,33 @@ function render(theDojo) {
 }
 
 function howMany(i, j, element) {
-    let ninjas=0;
-    // var x=theDojo;
-    let possabilities=[[-1,-1],[-1,0],[-1,1],
-                        [0,-1],[0,0],[0,1],
-                        [1,-1],[1,0],[1,1]];
-        for (let k = 0; k < possabilities.length; k++) {
-            let x=possabilities[k][0];
-            let y=possabilities[k][1];
-            let x1= j+x;
-            let y1= i+y;
-            // console.log(i+" "+j);
-            console.log(x+" "+y);
-            console.log(x1+" "+y1);
-
-            console.log(theDojo[i+x][j+y]);
-            if(typeof (theDojo[x1][y1]) === 'undefined'){
-                console.log("hi")
-            }else if(typeof (theDojo[i+x][j+y]) !== 'undefined'){
-                ninjas +=theDojo[x1][y1];
-            }
+    if(theDojo[i][j] == 1){
+        document.querySelector("h2").innerHTML="GAME OVER !!!!";
+        var btns=document.querySelectorAll('button');
+        for (let b = 0; b  < btns.length; b++) {
+            btns[b].disabled=true;
         }
-
-
-        // // we can calculate up down left right
-        // //same row 
-        // ninjas += x[i][j] + x[i][j+1] + x[i][j-1];
-        // // ubove row 
-        // ninjas += x[i+1][j] + x[i+1][j+1] + x[i+1][j-1];
-        // // bellow row 
-        // ninjas += x[i-1][j] + x[i-1][j+1] + x[i-1][j-1];
+        setTimeout(function(){
+            window.location.reload(1);
+        }, 3000);
+    }else{
+        let ninjas=0;
+        let possabilities=[[-1,-1],[0,-1],[1,-1],
+                            [-1,0],[0,0],[1,0],
+                            [-1,1],[0,1],[1,1]];
+            for (let k = 0; k < possabilities.length; k++) {
+                let x=possabilities[k][0];
+                let y=possabilities[k][1];
     
-    console.log(ninjas);
-    // alert("TODO - determine how many ninjas are hiding in adjacent squares");
+                if(typeof (theDojo[i+y])!== 'undefined' && typeof (theDojo[i+y][j+x]) !== 'undefined'){
+                    ninjas +=theDojo[i+y][j+x];
+                }
+            }
+        console.log(ninjas);
+        element.innerHTML=ninjas;
+    }
 }
-    
-// BONUS CHALLENGES
-// 1. draw the number onto the button instead of alerting it
-// 2. at the start randomly place 10 ninjas into theDojo with at most 1 on each spot
-// 3. if you click on a ninja you must restart the game 
-//    dojoDiv.innerHTML = `<button onclick="location.reload()">restart</button>`;
-    
+
 // start the game
 // message to greet a user of the game
 var style="color:cyan;font-size:1.5rem;font-weight:bold;";
