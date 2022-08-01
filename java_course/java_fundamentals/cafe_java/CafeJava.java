@@ -1,4 +1,4 @@
-package java_course.cafe_java;
+package java_course.java_fundamentals.cafe_java;
 
 public class CafeJava {
     public static void main(String[] args) {

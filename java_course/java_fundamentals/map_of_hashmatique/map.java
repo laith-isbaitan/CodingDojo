@@ -1,4 +1,4 @@
-package java_course.map_of_hashmatique;
+package java_course.java_fundamentals.map_of_hashmatique;
 
 import java.util.HashMap;
 import java.util.Set;

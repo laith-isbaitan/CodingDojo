@@ -1,4 +1,4 @@
-package java_course.first_java_program;
+package java_course.java_fundamentals.first_java_program;
 
 public class script {
     public static void main(String[] args) {

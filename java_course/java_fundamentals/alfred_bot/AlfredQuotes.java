@@ -1,4 +1,4 @@
-package java_course.alfred_bot;
+package java_course.java_fundamentals.alfred_bot;
 import java.util.Date;
 public class AlfredQuotes {
     

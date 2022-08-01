@@ -1,4 +1,4 @@
-package java_course.list_of_excepions;
+package java_course.java_fundamentals.list_of_excepions;
 
 import java.util.ArrayList;
 

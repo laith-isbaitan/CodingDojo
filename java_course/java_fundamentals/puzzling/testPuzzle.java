@@ -1,4 +1,4 @@
-package java_course.puzzling;
+package java_course.java_fundamentals.puzzling;
 
 import java.util.ArrayList;
 
